@@ -62,4 +62,4 @@ jobs:
             --restart always \
             --name $(echo $IMAGE_NAME) \
             -p 4001:4001 \
-            $(echo $REGISTRY)/$(echo $IMAGE_NAME):$(echo $GITHUB_SHA | head -c7)
+            $(echo $REGISTRY)/$(echo $IMAGE_NAME):latest
