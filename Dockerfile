@@ -1,5 +1,5 @@
 FROM python:3.10-slim as python-base
-ENV PORT=4001
+ENV PORT=8001
 RUN apt-get update && apt-get install --no-install-recommends -y \
     build-essential
 
