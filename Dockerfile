@@ -6,9 +6,9 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 WORKDIR /app
 COPY requirements.txt /app/
 
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 WORKDIR /app
 COPY . /app
 
-ENTRYPOINT /usr/local/bin/uvicorn app.main:app --host 0.0.0.0 --port $PORT
+ENTRYPOINT /usr/local/bin/uvicorn main:app --host 0.0.0.0 --port $PORT
